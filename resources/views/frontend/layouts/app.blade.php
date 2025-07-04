@@ -37,7 +37,7 @@
                 </li>
                 <li>
                     <a href="{{ url('/') }}" class="flex items-center text-white hover:text-gray-300">
-                        <img src="{{ asset('Logo.png') }}" alt="Logo" class="w-[240px] h-auto" />
+                        <img src="{{ asset('logo.png') }}" alt="Logo" class="w-[240px] h-auto" />
                     </a>
                 </li>
                 <li>
