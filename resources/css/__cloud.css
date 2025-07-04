@@ -1,0 +1,20 @@
+/* cloud default animation */
+/* Cloud shouldbe moved left to right and go back to left */
+.cloud{
+    /* animation: cloud 20s linear infinite; */
+}
+
+
+@keyframes cloud {
+    0% {
+        transform: translateX(-80px);
+    }
+
+    50% {
+        transform: translateX(80px);
+    }
+
+    100% {
+        transform: translateX(-80px);
+    }
+}

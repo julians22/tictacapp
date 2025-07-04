@@ -1,0 +1,22 @@
+/* Font CSS - Load all fonts in this folder */
+
+@font-face {
+    font-family: 'COOPBL';
+    src: url('./COOPBL.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./Poppins-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Usage examples:
+ * font-family: 'COOPBL', sans-serif;
+ * font-family: 'Poppins', sans-serif;
+ */
