@@ -66,4 +66,10 @@
 
         </div>
     </div>
+
+    <div class="top-[20%] right-[4%] fixed w-[180px]">
+        <div class="relative w-full">
+            <img data-direction="left" data-speed="1" src="{{ asset('img/air_baloon.png') }}" alt="" class="absolute w-auto h-auto cloud" style="width: 290px; height: auto;">
+        </div>
+    </div>
 @endsection
