@@ -16,6 +16,8 @@
             <img src="{{ asset('img/grafich bg--sm.png') }}" alt="" id="mainbackground" class="w-full h-auto">
             <img src="{{ asset('img/cave1-1-01-sm.png') }}" alt="" class="absolute inset-0 w-full h-full object-cover">
 
+            {{-- Cloud images --}}
+
             <div class="top-[4%] right-[16%] absolute w-[200px] h-[200px]">
                 <div class="relative w-full h-full">
                     <img data-direction="right" data-speed="1" src="{{ asset('img/cloud.png') }}" alt="" class="absolute w-auto h-auto cloud" style="width: 290px; height: auto;">
@@ -63,6 +65,26 @@
                     <img data-direction="right" data-speed="1" src="{{ asset('img/cloud.png') }}" alt="" class="absolute w-auto h-auto cloud" style="width: 100px; height: auto;">
                 </div>
             </div>
+
+            {{-- End of Cloud images --}}
+
+
+            {{-- Text Image --}}
+            <a href="#" class="top-[26.7%] right-[32%] absolute">
+                <img src="{{ asset('img/text/Website TicTac-04.png') }}" alt="Crunch Selection" title="Crunch Selection" class="w-[355px] text-image">
+            </a>
+
+            <a href="#" class="top-[49.5%] left-[13%] absolute">
+                <img src="{{ asset('img/text/Website TicTac-05.png') }}" alt="TicTacvity" title="TicTacvity" class="w-[355px] text-image">
+            </a>
+
+            <a href="#" class="top-[62.1%] right-[10%] absolute">
+                <img src="{{ asset('img/text/Website TicTac-06.png') }}" alt="TicTacvity" title="TicTacvity" class="w-[355px] text-image">
+            </a>
+
+            <a href="#" class="top-[83.6%] left-[33.8%] absolute">
+                <img src="{{ asset('img/text/Website TicTac-07.png') }}" alt="TicTacvity" title="TicTacvity" class="w-[355px] text-image">
+            </a>
 
         </div>
     </div>
