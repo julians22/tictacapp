@@ -11,6 +11,10 @@
 @section('content')
     {{-- ...existing code or welcome page content... --}}
 
+    <div class="top-[60px] left-[10%] absolute w-[705px]">
+        <img src="{{ asset('img/text/Website TicTac-03.png') }}" alt="" class="w-full text-welcome-image">
+    </div>
+
     <div id="smooth-wrapper">
         <div class="relative pt-28" id="smooth-content">
             <img src="{{ asset('img/grafich bg--sm.png') }}" alt="" id="mainbackground" class="w-full h-auto">

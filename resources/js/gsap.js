@@ -26,12 +26,56 @@ document.addEventListener('DOMContentLoaded', function() {
         handleImageLoad();
     }
 
+    initWelcomeTextAnimations();
+
     // Initialize cloud animations regardless of image load state
     initCloudAnimations();
 
 });
 
-const gsapContainer = [];
+function initWelcomeTextAnimations() {
+    const textImages = document.querySelector('.text-welcome-image');
+    if (!textImages) {
+        console.warn('No text images found for animation');
+        return;
+    }
+    console.log('Initializing welcome text animations');
+    gsap.set(textImages, {
+        opacity: 0,
+        scale: 0.8,
+        position: 'relative',
+        left: '-50px',
+        top: '20px'
+    });
+    gsap.to(textImages, {
+        opacity: 1,
+        scale: 1,
+        left: '0px',
+        top: '0px',
+        duration: 1.2 + Math.random() * 0.5,
+        ease: "back.out(1.7)",
+        scrollTrigger: {
+            trigger: textImages,
+            start: "top 85%", // When the top of the image is 85% down the viewport
+            end: "top 15%",   // When the top of the image is 15% down the viewport
+            toggleActions: "play none none reverse",
+            markers: false, // Enable to see trigger points
+            onEnter: () => console.log('Welcome text entered viewport'),
+            onLeave: () => console.log('Welcome text left viewport'),
+            refreshPriority: -1
+        }
+    });
+    gsap.to(textImages, {
+        y: 8,
+        rotation: 2,
+        duration: 2.5 + Math.random() * 1.5,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: -1,
+        delay: 1.5 + Math.random() // Start after entrance
+    });
+}
+
 
 function initCloudAnimations() {
     // Get all cloud images and their wrapper divs
