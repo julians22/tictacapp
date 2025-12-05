@@ -19,7 +19,7 @@
 
 </head>
 <body class="relative min-h-screen">
-    <div class="z-0 absolute inset-0 bg-blue-400 from-fuchsia-200 to-blue-400"></div>
+    <div class="z-0 absolute inset-0 bg-linear-0 from-tictac-blue via-50% to-tictac-blue-light"></div>
 
     <header class="z-10 relative">
 

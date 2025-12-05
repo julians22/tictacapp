@@ -10,6 +10,9 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
     --font-coopbl: 'COOPBL', sans-serif;
     --font-poppins: 'Poppins', sans-serif;
+
+    --color-tictac-blue-light: #00B3EE;
+    --color-tictac-blue: #006AC1;
 }
 
 

@@ -11,14 +11,18 @@
 @section('content')
     {{-- ...existing code or welcome page content... --}}
 
-    <div class="top-[60px] left-[10%] absolute w-[705px]">
+    {{-- <div class="top-[60px] left-[10%] absolute w-[705px]">
         <img src="{{ asset('img/text/Website TicTac-03.png') }}" alt="" class="w-full text-welcome-image">
-    </div>
+    </div> --}}
 
     <div id="smooth-wrapper">
         <div class="relative pt-28" id="smooth-content">
-            <img src="{{ asset('img/grafich bg--sm.png') }}" alt="" id="mainbackground" class="w-full h-auto">
-            <img src="{{ asset('img/cave1-1-01-sm.png') }}" alt="" class="absolute inset-0 w-full h-full object-cover">
+            <picture>
+                <source srcset="{{ asset('img/resized_grafich-bg.webp') }}" type="image/webp">
+                <source srcset="{{ asset('img/grafich_bg--sm.png') }}" type="image/jpeg">
+                <img src="{{ asset('img/grafich_bg--sm.png') }}" alt="" id="mainbackground" class="w-full h-auto">
+            </picture>
+            {{-- <img src="{{ asset('img/cave1-1-01-sm.png') }}" alt="" class="absolute inset-0 w-full h-full object-cover"> --}}
 
             {{-- Cloud images --}}
 
