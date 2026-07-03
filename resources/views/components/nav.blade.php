@@ -30,8 +30,12 @@
                 <a href="{{ route('tictacstation') }}">TicTacStation</a>
             </li>
 
-            <li class="font-winky-sans font-semibold nav-link {{ active_class(Route::is('tictactivity*'), 'selected') }}">
+            {{-- <li class="font-winky-sans font-semibold nav-link {{ active_class(Route::is('tictactivity*'), 'selected') }}">
                 <a href="{{ route('tictactivity.index') }}">TicTactivity</a>
+            </li> --}}
+
+            <li class="font-winky-sans font-semibold nav-link">
+                <span class="text-gray-400 cursor-not-allowed">TicTactivity</span>
             </li>
 
             <li>
@@ -43,6 +47,10 @@
             <li class="font-winky-sans font-semibold nav-link {{ active_class(Route::is('tictalks*'), 'selected') }}">
                 <a href="{{ route('tictalks.index') }}">TicTalks</a>
             </li>
+
+            {{-- <li class="font-winky-sans font-semibold nav-link">
+                <span class="text-gray-400 cursor-not-allowed">TicTalks</span>
+            </li> --}}
 
             <li class="font-winky-sans font-semibold nav-link {{ active_class(Route::is('gameon*'), 'selected') }}">
                 @auth('web')

@@ -1,35 +1,38 @@
- <x-modal model="openPopUp">
-     <div class="mx-auto max-h-[90dvh] w-max outline-0 focus-visible:outline-0">
-         <div @class([
-             'max-w-4xl focus-visible:outline-0 outline-0',
-             'slider-outer-shadow rounded-4xl bg-card-blue clamp-[p,2,3] relative mb-10 w-fit' => db_config(
-                 'pop-up.enable_container'),
-         ])>
-             <div @class([
-                 'focus-visible:outline-0 outline-0',
-                 'slider-inner-shadow clamp-[px,1,2] clamp-[py,2,3] relative max-h-[90dvh] w-fit max-w-[90vw] overflow-hidden rounded-3xl bg-white' => db_config(
-                     'pop-up.enable_container'),
-             ])>
-                 @if (db_config('pop-up.image'))
-                     @if (db_config('pop-up.url', null))
-                         <a class="outline-0 focus-visible:outline-0" target="_blank"
-                             href="{{ db_config('pop-up.url', null) }}">
-                     @endif
-                     <img @class([
-                         'mx-auto object-contain rounded-xl focus-visible:outline-0 outline-0',
-                         'block  h-full max-h-[83dvh]',
-                     ]) src="{{ asset('storage/' . db_config('pop-up.image')) }}"
-                         alt="">
-                     @if (db_config('pop-up.url'))
-                         </a>
-                     @endif
-                 @endif
-             </div>
-
-             <div class="clamp-[right,-2,-4] clamp-[top,-2,-4] absolute cursor-pointer" x-on:click="openPopUp = false">
-                 <img class="clamp-[size,9,14]" src="{{ asset('img/close-icon.png') }}" />
-             </div>
-         </div>
-
-     </div>
- </x-modal>
+<x-modal model="openPopUp">
+    <div class="flex items-center justify-center w-full h-full p-4">
+        <div @class([
+            'relative',
+            'slider-outer-shadow rounded-4xl bg-card-blue p-2 md:p-3' => db_config('pop-up.enable_container'),
+        ])>
+            <div @class([
+                'relative bg-white rounded-3xl',
+                'slider-inner-shadow p-2 md:p-3' => db_config('pop-up.enable_container'),
+            ])>
+                @if (db_config('pop-up.image'))
+                    @if (db_config('pop-up.url'))
+                        <a href="{{ db_config('pop-up.url') }}" target="_blank">
+                    @endif
+                    <img
+                        src="{{ asset('storage/' . db_config('pop-up.image')) }}"
+                        alt=""
+                        class="block mx-auto w-auto h-auto max-w-[90vw] md:max-w-[80vw] lg:max-w-[900px] max-h-[75vh] md:max-h-[85vh] object-contain rounded-xl"
+                    >
+                    @if (db_config('pop-up.url'))
+                        </a>
+                    @endif
+                @endif
+            </div>
+            <button
+                type="button"
+                @click="openPopUp = false"
+                class="absolute -top-4 -right-4 md:-top-6 md:-right-6 z-50"
+            >
+                <img
+                    src="{{ asset('img/close-icon.png') }}"
+                    class="w-10 h-10 md:w-14 md:h-14"
+                    alt="Close"
+                >
+            </button>
+        </div>
+    </div>
+</x-modal>

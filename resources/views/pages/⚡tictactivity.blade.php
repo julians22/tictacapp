@@ -21,7 +21,7 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictacti
             ->description(__('seo.event.description'));
     }
 
-    #[Computed]
+    #[Computed()]
     public function activities()
     {
         return Activity::with('category')
@@ -31,7 +31,7 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictacti
             ->paginate(8);
     }
 
-    #[Computed]
+    #[Computed()]
     public function categories()
     {
         return Activity::all()->pluck('category')->unique();

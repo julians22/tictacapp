@@ -5,6 +5,15 @@ return [
         'title' => 'TicTacLand | Your Ultimate Crunchy Snack Destination',
         'description' => 'More than just a snack. Join the fun at TicTacLand! Explore our bold flavors, join exciting TicTactivity, and get your daily crunch fix of TicTac Pilus.',
     ],
+    'terms' => [
+        'title' => 'Terms & Conditions - TicTacLand',
+        'description' => 'Terms and conditions of TicTacLand',
+    ],
+
+    'privacy' => [
+        'title' => 'Privacy Policy - TicTacLand',
+        'description' => 'Privacy policy of TicTacLand',
+    ],
     'product' => [
         'title' => 'TicTac Station | Discover Your Favorite Crunchy Pilus Flavors',
         'description' => 'Elevate your snacking game at TicTac Station. Find the perfect Pilus Dua Kelinci flavor to accompany your daily hustle and chill moments.',

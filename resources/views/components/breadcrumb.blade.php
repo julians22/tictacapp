@@ -30,14 +30,15 @@
                             clip-rule="evenodd" />
                     </svg>
 
-                    <a class="breadcrumb-link {{ $loop->last ? 'current' : '' }}"
+                   <a class="breadcrumb-link {{ $loop->last ? 'current' : '' }} 
+                        max-w-[90px] md:max-w-none truncate"
                         title="{{ $link['label'] }}"
                         href="{{ $link['url'] ?? '#' }}"
                         @if ($loop->last)
                             aria-current="page"
                             onclick="return false;"
                         @endif
-                        >
+                    >
                         {{ $link['label'] }}
                     </a>
                 </div>

@@ -108,9 +108,24 @@
     </main>
 
     <footer class="px-4">
-        <p class="my-8 text-white text-center clamp-[text,sm,lg]">
-            Designed by Designcub3. 2025. Copyright to Tic Tac Dua Kelinci.
-        </p>
+        <div class="my-8">
+            <p class="text-white text-center clamp-[text,sm,lg]">
+                Designed by Designcub3. 2025. Copyright to Tic Tac Dua Kelinci.
+            </p>
+            <div class="text-center text-xs mt-2 text-white">
+                <a href="{{ route('terms') }}" 
+                    class="cursor-pointer underline"
+                >
+                    {{ __('auth.Terms_Conditions') }}
+                </a> 
+                |
+                <a href="{{ route('privacy') }}" 
+                    class="cursor-pointer underline"
+                >
+                    {{ __('auth.privacy_policy') }}
+                </a>
+            </div>
+        </div>
     </footer>
 
     @stack('custom-scripts')

@@ -32,8 +32,8 @@
             <li data-before-content="TicTalks" @class([
                 'nav--item-outline' => request()->routeIs('tictalks.*'),
             ])>
-                {{-- <a class="text-white" href="{{ route('tictalks.index') }}">TicTalks</a> --}}
-                <a class="text-gray-500 cursor-not-allowed" href="#">TicTalks</a>
+                <a class="text-white" href="{{ route('tictalks.index') }}">TicTalks</a>
+                {{-- <a class="text-gray-500 cursor-not-allowed" href="#">TicTalks</a> --}}
             </li>
 
             <li data-before-content="Game On!" @class([

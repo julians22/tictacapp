@@ -24,6 +24,22 @@ Route::group([
         return view('pages.welcome');
     })->name('home');
 
+    Route::get('/terms-and-conditions', function () {
+        seo()
+            ->title(__('seo.terms.title'), template: false)
+            ->description(__('seo.terms.description'));
+
+        return view('pages.terms');
+    })->name('terms');
+
+    Route::get('/privacy-policy', function () {
+        seo()
+            ->title(__('seo.privacy.title'), template: false)
+            ->description(__('seo.privacy.description'));
+
+        return view('pages.privacy');
+    })->name('privacy');
+
     Route::group([
         'prefix' => 'blog-tictalks',
         'as' => 'tictalks.',

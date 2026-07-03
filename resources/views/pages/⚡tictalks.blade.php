@@ -7,8 +7,7 @@ use Livewire\Attributes\Url;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks-bg-island.png')]"])] class extends Component
-{
+new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks-bg-island.png')]"])] class extends Component {
     use WithPagination;
 
     #[Url('category', except: 'all')]
@@ -16,9 +15,7 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks
 
     public function mount()
     {
-        seo()
-            ->title(__('seo.blog.title'), false)
-            ->description(__('seo.blog.description'));
+        seo()->title(__('seo.blog.title'), false)->description(__('seo.blog.description'));
     }
 
     #[Computed]
@@ -40,7 +37,7 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks
 
     public function handleCategoryChange(?string $slug = null)
     {
-        if ($this->selectedCategory === 'all' && ($slug === 'all' || ! $slug)) {
+        if ($this->selectedCategory === 'all' && ($slug === 'all' || !$slug)) {
             $this->skipRender();
 
             return;
@@ -78,7 +75,7 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks
 
         <div class="flex flex-wrap items-center text-white clamp-[gap,2,4]" wire:transition>
 
-            <x-button :selected="$selectedCategory === 'all'" wire:click="handleCategoryChange">{{__("global.all")}}</x-button>
+            <x-button :selected="$selectedCategory === 'all'" wire:click="handleCategoryChange">{{ __('global.all') }}</x-button>
 
             @foreach ($this->categories as $category)
                 <x-button :selected="$category->slug === $selectedCategory"
@@ -88,7 +85,7 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks
         </div>
     </div>
 
-    <x-slider.slider id="activitySlider" :items="$this->activities" routeName="tictalks"/>
+    <x-slider.slider id="activitySlider" :items="$this->activities" routeName="tictalks" />
 
     {{ $this->activities->links() }}
 
@@ -102,16 +99,19 @@ new #[Layout('layouts::tictack', ['bg' => "before:bg-[url('../assets/bg/tictalks
             slidesPerView: 1,
             spaceBetween: 20,
             breakpoints: {
-                // when window width is >= 320px
                 425: {
-                    slidesPerView: 2,
+                    slidesPerView: 1,
                     spaceBetween: 20,
                 },
-                // when window width is >= 480px
                 720: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                1024: {
                     slidesPerView: 3,
                     spaceBetween: 30,
                 },
+
             },
             scrollbar: {
                 el: ".swiper-scrollbar",

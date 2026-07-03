@@ -20,4 +20,6 @@ return [
     'no_account_yet' => 'Belum punya akun ?, klik disini',
     'login_with' => 'Login dengan',
     'register_title' => 'Daftar',
+    'Terms_Conditions' => 'Syarat & Ketentuan',
+    'privacy_policy' => 'Kebijakan Privasi',
 ];

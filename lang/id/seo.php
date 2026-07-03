@@ -6,6 +6,15 @@ return [
         'title' => 'Jelajahi Dunia Seru TicTacLand | Pilus TicTac Dua Kelinci',
         'description' => 'Bikin hari-harimu makin kriuk di TicTacLand! Pusat informasi snack pilus favorit, event TicTactivity, hingga update TicTalks yang seru. Masuk sekarang!',
     ],
+    'terms' => [
+        'title' => 'Syarat & Ketentuan | TicTacLand',
+        'description' => 'Halaman syarat dan ketentuan penggunaan TicTacLand',
+    ],
+
+    'privacy' => [
+        'title' => 'Kebijakan Privasi | TicTacLand',
+        'description' => 'Halaman kebijakan privasi TicTacLand',
+    ],
     'product' => [
         'title' => 'TicTac Station | Pilih Varian Pilus Seru Teman Aktivitasmu',
         'description' => 'Temukan semua rasa favoritmu di TicTac Station. Dari pedas yang bikin melek sampai rasa original yang nagih, Pilus Dua Kelinci siap temani setiap momen serumu.',

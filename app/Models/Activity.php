@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Str;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 use Spatie\Tags\HasTags;
@@ -83,6 +84,21 @@ class Activity extends Model implements HasMedia, HasRichContent
     {
         $this->addMediaCollection('thumbnail')
             ->singleFile();
+    }
+
+    public function registerMediaConversions(?Media $media = null): void
+    {
+        $this->addMediaConversion('webp')
+            ->width(1024)
+            ->format('webp')
+            ->performOnCollections('thumbnail')
+            ->nonQueued();
+
+        $this->addMediaConversion('webp_small')
+            ->width(400)
+            ->performOnCollections('thumbnail')
+            ->format('webp')
+            ->nonQueued();
     }
 
     /**

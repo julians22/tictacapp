@@ -20,4 +20,6 @@ return [
     'no_account_yet' => "Don't have an account yet ?, sign up here",
     'login_with' => 'Login with',
     'register_title' => 'Register',
+    'Terms_Conditions' => 'Terms & Conditions',
+    'privacy_policy' => 'Privacy Policy',
 ];

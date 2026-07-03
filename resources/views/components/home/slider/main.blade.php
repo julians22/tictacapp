@@ -63,24 +63,31 @@
                 [
                     'name' => 'whatsaap',
                     'image' => asset('img/social-icons/wa.svg'),
-                    'link' => 'https://www.whatsapp.com/',
+                    'link' => db_config('social.whatsapp'),
+                ],
+                [
+                    'name' => 'facebook',
+                    'image' => asset('img/social-icons/fb.svg'),
+                    'link' => db_config('social.facebook'),
                 ],
                 [
                     'name' => 'tiktok',
                     'image' => asset('img/social-icons/tiktok.svg'),
-                    'link' => 'tiktok.com',
+                    'link' => db_config('social.tiktok'),
                 ],
                 [
                     'name' => 'instagram',
                     'image' => asset('img/social-icons/ig.svg'),
-                    'link' => 'instagram.com',
+                    'link' => db_config('social.instagram'),
                 ],
                 [
                     'name' => 'youtube',
                     'image' => asset('img/social-icons/yt.svg'),
-                    'link' => 'youtube.com',
+                    'link' => db_config('social.youtube'),
                 ],
             ];
+
+            $socials = array_filter($socials, fn($s) => !empty($s['link']));
         @endphp
 
         @foreach ($socials as $social)

@@ -1,15 +1,26 @@
 @props(['item', 'routeName' => null])
-<div class="swiper-slide"
+<style>
+    #activitySlider .swiper-wrapper {
+        align-items: stretch;
+    }
+
+    #activitySlider .swiper-slide {
+        height: auto;
+        display: flex;
+    }
+</style>
+<div class="flex mb-10 h-auto swiper-slide"
     @if (isset($item->key) || isset($item->id)) wire:key="{{ isset($item->key) ? $item->key : $item->id }}" @endif>
-    <div class="relative bg-tictac-primary-blue slider-outer-shadow mb-10 p-2 rounded-4xl">
-        <div class="bg-white slider-inner-shadow rounded-3xl overflow-clip">
+    <div class="relative flex flex-col bg-tictac-primary-blue slider-outer-shadow mb-10 p-2 rounded-4xl w-full h-full">
+        <div class="flex flex-col bg-white slider-inner-shadow rounded-3xl h-full overflow-clip">
             <div class="aspect-6/4 overflow-hidden">
-                <img class="w-full"
-                    src="{{ $item->getFirstMediaUrl('thumbnail') ? $item->getFirstMediaUrl('thumbnail') : 'https://placehold.co/600x400' }}"
-                    alt="{{$item->title ?? '' }}">
+                <img
+                    class="w-full h-full object-cover"
+                    src="{{ $item->getFirstMediaUrl('thumbnail', 'webp_small') ? $item->getFirstMediaUrl('thumbnail', 'webp_small') : 'https://placehold.co/600x400' }}"
+                    alt="{{ $item->title ?? '' }}">
             </div>
 
-            <div class="flex flex-col gap-4 px-4 pt-6 pb-10 text-center">
+            <div class="flex flex-col flex-1 gap-4 px-4 pt-6 pb-10 text-center">
                 <p class="font-bold text-orange-500 text-sm underline tracking-widest">
                     {{ $item->category->name ?? '' }}
                 </p>
